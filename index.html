@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Text Generator</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #text-display {
+            position: absolute;
+            top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            width: 100%;
+        }
+
+        #generate-btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 12px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #generate-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="text-display">Click the button to generate text!</div>
+    <button id="generate-btn">Generate Random Text</button>
+
+    <script>
+        const texts = [
+            "Your hairline is awesome",
+            "I'm proud with what your doing",
+            "You look amazing",
+            "You're the greatest person ever",
+            "I hope you have a great day",
+            "Honestly, your amazing",
+            "You're a very strong person",
+            "You are buff",
+            "Your shirt is cool",
+            "You're cool",
+            "You're the best",
+            "I know your a 10/10",
+            "Your the 1 in a trillion chance everyone wanted",
+            "I know your everyone's best friend",
+            "I'm grateful that your here right now",
+            "Your the best person to ever hop on into this website",
+            "Your smart",
+            "Your fast",
+            "I like your haircut",
+            "You are a very confident person",
+            "Your determination is inspiring",
+            "Did you know that all of these compliments, are just for you?",
+            "You're more valuable than gold",
+            "You're more valuable than diamonds",
+            "You're more valuable than emeralds",
+            "You're more valuable than rubies",
+            "You're more valuable than amethysts",
+            "Your future is so bright it lights the sky",
+            "I know your an 11/10",
+            "I know your a 12/10",
+            "I know your a 5/5",
+            "I know your a thousand/10",
+            "I know your a million/10",
+            "I know your a billion/10",
+            "I know your a trillion/10",
+            "You're a very nice person",
+            "You're a wonderful person",
+            "Amazing, that is what you are",
+            "Your eyes are cool",
+            "You're rarer than gold",
+            "You're rarer than diamonds",
+            "You're rarer than emeralds",
+            "You're rarer than rubies",
+            "You're rarer than amethysts",
+            "You have a great personality",
+            "I know your an infinity/10",
+            "You're legendary",
+            "You're a legend",
+            "You're epic",
+            "You're rare",
+            "I admire everything about you",
+            "I like your personality",
+            "You're a winner!",
+            "If you feel your a nobody just know that to me, you are somebody",
+            "You're an athletic person",
+            "You're a creative person",
+            "Honestly you are just amazing",
+            "You're a very capable person",
+            "Your music taste is pretty good y'know?",
+            "Your taste in food is pretty good y'know?",
+            "You could beat me in a fight",
+            "Your skills are unmatched",
+            "Your taste in design is awesome",
+            "You're stronger than superman",
+            "You're faster than the flash",
+            "You're smarter than batman",
+            "You're more tactical than captain america",
+            "You have great potential",
+            "If you are reading this then just know you are awesome for reading this",
+            "If you think nothing is made for you, just know that this compliment is",
+            "Without you, this website would have no meaning",
+            "If you somehow got this rare message then, you suck but very lucky",
+            "𝕋𝕙𝕚𝕤 𝕗𝕒𝕟𝕔𝕪 𝕥𝕖𝕩𝕥 𝕚𝕤 𝕗𝕠𝕣 𝕪𝕠𝕦",
+                   "You are the sharpest tool in the shed",
+                   "You are richer than Elon Musk",
+                   "If you were a rock, you would be THE ROCK - Lewis",
+                   "You are cooler than every game on coolmathgames",
+                   "𝕐𝕠𝕦 𝕝𝕠𝕠𝕜 𝕘𝕠𝕠𝕕 𝕨𝕚𝕥𝕙 𝕒 𝕡𝕚𝕟𝕜 𝕕𝕠𝕘 𝕔𝕠𝕝𝕝𝕒𝕣 - Francis (idk why he made this)",
+                       "You are more durable than the nokia 3310",
+                       "You are more golden than an enchanted golden apple - Lewis",
+                       "If you were a person, you would be ESCANOR - Lewis",
+                       "ｇｕｄ - Francis",
+            "boy (if you got this after good then 👌🤞😉🤫) - Francis",
+            "If you were a triangle, you'd be an ACUTE one",
+            "1945年に日本に落ちたとされた「太陽よりも明るい」",          
+            "HELP! HELP! I'M FORCED TO GENERATE COMPLIMENTS TO YOU OR I'LL DI-",
+            "The summer of the organization in 2034 was tough one, yesterday was normal, today wasn't. The Blood Came out. People described seeing a large distorted figure with holes in it's head. The Blood Came Out. Honestly I'm surprised that it was-. The Blood Came Out.",
+            "Your a will peice of sourdough with a teeny pinch of sweet, sweet sweet suga booga - Mr. SourDough"
+        ];
+
+        const button = document.getElementById('generate-btn');
+        const display = document.getElementById('text-display');
+
+        button.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * texts.length);
+            display.textContent = texts[randomIndex];
+        });
+    </script>
+
+</body>
+</html>
